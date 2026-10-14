@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react'
-import './Pagina.scss'
+import type { ReactNode } from 'react';
+import './Pagina.scss';
 
 type PaginaProps = {
-  titulo: string
-  subtitulo?: string
-  children?: ReactNode
-}
+  titulo: string;
+  subtitulo?: string;
+  children?: ReactNode;
+};
 
 export const Pagina = ({ titulo, subtitulo, children }: PaginaProps) => (
   <section className="pagina">
@@ -16,4 +16,4 @@ export const Pagina = ({ titulo, subtitulo, children }: PaginaProps) => (
 
     {children ? <div className="pagina__cartao">{children}</div> : null}
   </section>
-)
+);

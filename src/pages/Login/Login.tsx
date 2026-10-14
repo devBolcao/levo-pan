@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import type { FormEvent } from 'react'
-import { Lock, LogIn, Mail } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
-import './Login.scss'
+import { useState } from 'react';
+import type { FormEvent } from 'react';
+import { Lock, LogIn, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import './Login.scss';
 
 export const Login = () => {
-  const navegar = useNavigate()
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
+  const navegar = useNavigate();
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
 
   function entrar(evento: FormEvent<HTMLFormElement>) {
-    evento.preventDefault()
-    navegar('/app/home')
+    evento.preventDefault();
+    navegar('/app/home');
   }
 
   return (
@@ -55,5 +55,5 @@ export const Login = () => {
         </button>
       </form>
     </div>
-  )
-}
+  );
+};

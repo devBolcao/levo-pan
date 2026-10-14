@@ -1,14 +1,14 @@
-import { LogOut, Moon, PanelLeftClose, PanelLeftOpen, Sun } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/img/logo6.png'
-import './Header.scss'
+import { Moon, PanelLeftClose, PanelLeftOpen, Sun } from 'lucide-react';
+import logo from '../../assets/img/logo6.png';
+import { UsuarioMenu } from '../UsuarioMenu/UsuarioMenu';
+import './Header.scss';
 
 type HeaderProps = {
-  temaEscuro: boolean
-  aoAlternarTema: () => void
-  menuRecolhido: boolean
-  aoAlternarMenu: () => void
-}
+  temaEscuro: boolean;
+  aoAlternarTema: () => void;
+  menuRecolhido: boolean;
+  aoAlternarMenu: () => void;
+};
 
 export const Header = ({
   temaEscuro,
@@ -16,12 +16,6 @@ export const Header = ({
   menuRecolhido,
   aoAlternarMenu,
 }: HeaderProps) => {
-  const navegar = useNavigate()
-
-  function sair() {
-    navegar('/login')
-  }
-
   return (
     <header className="header">
       <div className="header__esquerda">
@@ -52,11 +46,8 @@ export const Header = ({
           {temaEscuro ? <Sun size={20} /> : <Moon size={20} />}
         </button>
 
-        <button type="button" className="header__botao" onClick={sair}>
-          <LogOut size={20} />
-          <span>Sair</span>
-        </button>
+        <UsuarioMenu />
       </div>
     </header>
-  )
-}
+  );
+};

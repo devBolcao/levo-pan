@@ -1,19 +1,17 @@
-import { NavLink } from 'react-router-dom'
-import { itensMenu } from '../../assets/data/menu'
-import './MenuLateral.scss'
+import { NavLink } from 'react-router-dom';
+import { itensMenu } from '../../assets/data/menu';
+import './MenuLateral.scss';
 
 type MenuLateralProps = {
-  recolhido: boolean
-}
+  recolhido: boolean;
+};
 
 export const MenuLateral = ({ recolhido }: MenuLateralProps) => (
-  <aside
-    className={recolhido ? 'menu-lateral menu-lateral--recolhido' : 'menu-lateral'}
-  >
+  <aside className={recolhido ? 'menu-lateral menu-lateral--recolhido' : 'menu-lateral'}>
     <nav aria-label="Menu principal">
       <ul className="menu-lateral__lista">
         {itensMenu.map((item) => {
-          const Icone = item.icone
+          const Icone = item.icone;
 
           return (
             <li key={item.id}>
@@ -31,9 +29,9 @@ export const MenuLateral = ({ recolhido }: MenuLateralProps) => (
                 <span className="menu-lateral__rotulo">{item.rotulo}</span>
               </NavLink>
             </li>
-          )
+          );
         })}
       </ul>
     </nav>
   </aside>
-)
+);
