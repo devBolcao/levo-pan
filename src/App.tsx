@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 
-function App() {
+export const App = () => {
   const [temaEscuro, setTemaEscuro] = useState(
     () => document.documentElement.dataset.tema === 'escuro',
   )
@@ -24,4 +24,4 @@ function App() {
   )
 }
 
-export default App
+
