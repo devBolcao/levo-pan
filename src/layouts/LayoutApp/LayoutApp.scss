@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout__corpo {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.layout__conteudo {
+  flex: 1;
+  min-width: 0;
+  padding: 2.4rem;
+}

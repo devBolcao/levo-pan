@@ -1,0 +1,12 @@
+.footer {
+  padding: 1.6rem 2.4rem;
+  background-color: var(--cor-superficie);
+  border-top: 0.1rem solid var(--cor-borda);
+}
+
+.footer__texto {
+  display: block;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--cor-texto-suave);
+}

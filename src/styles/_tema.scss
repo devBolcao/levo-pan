@@ -7,12 +7,15 @@ $temas: (
     "cor-texto": #1f2937,
     "cor-texto-suave": #667085,
     "cor-borda": #dfe3e8,
-    "cor-primaria": #2563eb,
-    "cor-primaria-hover": #1d4ed8,
+    "cor-primaria": #274d94,
+    "cor-primaria-hover": #3d4cc2,
     "cor-sucesso": #15803d,
     "cor-alerta": #b45309,
     "cor-erro": #b91c1c,
-    "cor-sombra": rgba(15, 23, 42, 0.08)
+    "cor-sombra": rgba(15, 23, 42, 0.08),
+    // "cor-topo": #4f5fd6,
+    "cor-topo": #274d94,
+    "cor-topo-texto": #ffffff
   ),
   "escuro": (
     "cor-fundo": #111827,
@@ -25,7 +28,9 @@ $temas: (
     "cor-sucesso": #4ade80,
     "cor-alerta": #fbbf24,
     "cor-erro": #f87171,
-    "cor-sombra": rgba(0, 0, 0, 0.24)
+    "cor-sombra": rgba(0, 0, 0, 0.24),
+    "cor-topo": #1f2937,
+    "cor-topo-texto": #f3f4f6
   )
 );
 

@@ -1,0 +1,77 @@
+.login {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2.4rem;
+  background-color: var(--cor-fundo);
+}
+
+.login__cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 38rem;
+  padding: 3.2rem;
+  background-color: var(--cor-superficie);
+  border: 0.1rem solid var(--cor-borda);
+  border-radius: 1.2rem;
+  box-shadow: 0 1.2rem 3rem var(--cor-sombra);
+}
+
+.login__titulo {
+  font-size: 2.4rem;
+  color: var(--cor-texto);
+}
+
+.login__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  color: var(--cor-texto-suave);
+}
+
+.login__entrada {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0 1.2rem;
+  background-color: var(--cor-fundo);
+  border: 0.1rem solid var(--cor-borda);
+  border-radius: 0.6rem;
+  color: var(--cor-texto-suave);
+}
+
+.login__entrada:focus-within {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+.login__entrada input {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 0;
+  background-color: transparent;
+  border: none;
+  color: var(--cor-texto);
+  outline: none;
+}
+
+.login__botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  background-color: var(--cor-primaria);
+  border: none;
+  border-radius: 0.6rem;
+  color: var(--cor-superficie);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.login__botao:hover {
+  background-color: var(--cor-primaria-hover);
+}

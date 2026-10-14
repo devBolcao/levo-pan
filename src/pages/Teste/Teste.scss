@@ -1,0 +1,14 @@
+.teste {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.teste__titulo {
+  font-size: 2.4rem;
+  color: var(--cor-texto);
+}
+
+.teste__texto {
+  color: var(--cor-texto-suave);
+}

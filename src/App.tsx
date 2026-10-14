@@ -1,27 +1,22 @@
-import { useState } from 'react'
-import './App.scss'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { LayoutApp } from './layouts/LayoutApp/LayoutApp'
+import { Home } from './pages/Home/Home'
+import { Login } from './pages/Login/Login'
+import { Teste } from './pages/Teste/Teste'
 
-export const App = () => {
-  const [temaEscuro, setTemaEscuro] = useState(
-    () => document.documentElement.dataset.tema === 'escuro',
-  )
+export const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/login" element={<Login />} />
 
-  function alternarTema() {
-    const proximoTemaEscuro = !temaEscuro
+      <Route path="/app" element={<LayoutApp />}>
+        <Route index element={<Navigate to="/app/home" replace />} />
+        <Route path="home" element={<Home />} />
+        <Route path="teste" element={<Teste />} />
+      </Route>
 
-    setTemaEscuro(proximoTemaEscuro)
-    document.documentElement.dataset.tema = proximoTemaEscuro
-      ? 'escuro'
-      : 'claro'
-  }
-
-  return (
-    <div className="app">
-      <button type="button" onClick={alternarTema}>
-        Ativar tema {temaEscuro ? 'claro' : 'escuro'}
-      </button>
-    </div>
-  )
-}
-
-
+      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
+    </Routes>
+  </BrowserRouter>
+)

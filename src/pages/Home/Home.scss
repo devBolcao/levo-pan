@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.home__titulo {
+  font-size: 2.4rem;
+  color: var(--cor-texto);
+}
+
+.home__texto {
+  color: var(--cor-texto-suave);
+}

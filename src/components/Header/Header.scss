@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  min-height: 6rem;
+  padding-right: 2.4rem;
+  background-color: var(--cor-topo);
+  color: var(--cor-topo-texto);
+  box-shadow: 0 0.2rem 0.8rem var(--cor-sombra);
+}
+
+.header__esquerda {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header__logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22rem;
+  padding: 0 1.2rem;
+}
+
+.header__logo {
+  display: block;
+  width: auto;
+  height: 3.2rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.header__acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header__botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border: 0.1rem solid color-mix(in srgb, var(--cor-topo-texto) 35%, transparent);
+  border-radius: 0.6rem;
+  background-color: transparent;
+  color: var(--cor-topo-texto);
+  font-size: 1.4rem;
+}
+
+.header__botao:hover {
+  background-color: color-mix(in srgb, var(--cor-topo-texto) 18%, transparent);
+  border-color: var(--cor-topo-texto);
+}
