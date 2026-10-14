@@ -4,7 +4,8 @@
   padding: 1.6rem 1.2rem;
   background-color: var(--cor-superficie);
   border-right: 0.1rem solid var(--cor-borda);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   transition: width 0.2s ease;
 }
 
@@ -24,21 +25,23 @@
   align-items: center;
   gap: 1.2rem;
   padding: 1rem 1.2rem;
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
   color: var(--cor-texto-suave);
   font-size: 1.5rem;
+  font-weight: 500;
   text-decoration: none;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .menu-lateral__link:hover {
-  background-color: var(--cor-fundo);
+  background-color: color-mix(in srgb, var(--cor-primaria) 8%, transparent);
   color: var(--cor-texto);
 }
 
 .menu-lateral__link--ativo {
-  background-color: var(--cor-primaria);
-  color: var(--cor-superficie);
+  background-color: color-mix(in srgb, var(--cor-primaria) 14%, var(--cor-superficie));
+  color: var(--cor-primaria);
+  font-weight: 600;
 }
 
 .menu-lateral__rotulo {

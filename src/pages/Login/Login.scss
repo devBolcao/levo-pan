@@ -17,18 +17,22 @@
 .login__cartao {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.8rem;
   width: 100%;
-  max-width: 38rem;
-  padding: 3.2rem;
-  background-color: var(--cor-superficie);
-  border: 0.1rem solid var(--cor-borda);
-  border-radius: 1.2rem;
-  box-shadow: 0 1.2rem 3rem var(--cor-sombra);
+  max-width: 40rem;
+  padding: 3.6rem 3.2rem;
+  background-color: color-mix(in srgb, var(--cor-superficie) 88%, transparent);
+  border: 0.1rem solid color-mix(in srgb, var(--cor-borda) 65%, transparent);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 5rem var(--cor-sombra);
+  -webkit-backdrop-filter: blur(1.2rem);
+  backdrop-filter: blur(1.2rem);
 }
 
 .login__titulo {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--cor-texto);
 }
 
@@ -37,6 +41,7 @@
   flex-direction: column;
   gap: 0.6rem;
   font-size: 1.4rem;
+  font-weight: 500;
   color: var(--cor-texto-suave);
 }
 
@@ -47,23 +52,30 @@
   padding: 0 1.2rem;
   background-color: var(--cor-fundo);
   border: 0.1rem solid var(--cor-borda);
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
   color: var(--cor-texto-suave);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
 }
 
 .login__entrada:focus-within {
   border-color: var(--cor-primaria);
   color: var(--cor-primaria);
+  box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--cor-primaria) 18%, transparent);
 }
 
 .login__entrada input {
   flex: 1;
   min-width: 0;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   background-color: transparent;
   border: none;
   color: var(--cor-texto);
+  font-size: 1.5rem;
   outline: none;
+}
+
+.login__entrada input::placeholder {
+  color: var(--cor-texto-suave);
 }
 
 .login__botao {
@@ -74,12 +86,17 @@
   padding: 1.2rem;
   background-color: var(--cor-primaria);
   border: none;
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
   color: var(--cor-superficie);
   font-size: 1.6rem;
   font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
 .login__botao:hover {
   background-color: var(--cor-primaria-hover);
+}
+
+.login__botao:active {
+  transform: translateY(0.1rem);
 }

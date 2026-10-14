@@ -23,16 +23,22 @@ html {
 }
 
 body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.4;
-  color: var(--cor-texto);
-  background-color: var(--cor-fundo);
   display: flex;
   flex-direction: column;
   min-width: 32rem;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 button,
@@ -40,8 +46,18 @@ input,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 button {
   cursor: pointer;
+}
+
+:focus-visible {
+  outline: 0.2rem solid var(--cor-primaria);
+  outline-offset: 0.2rem;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--cor-primaria) 25%, transparent);
 }

@@ -1,0 +1,32 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.pagina__cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pagina__titulo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cor-texto);
+}
+
+.pagina__subtitulo {
+  font-size: 1.5rem;
+  color: var(--cor-texto-suave);
+}
+
+.pagina__cartao {
+  padding: 2.4rem;
+  background-color: var(--cor-superficie);
+  border: 0.1rem solid var(--cor-borda);
+  border-radius: 1.6rem;
+  box-shadow: 0 0.6rem 2rem var(--cor-sombra);
+  color: var(--cor-texto-suave);
+}

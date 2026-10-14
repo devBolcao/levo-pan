@@ -1,8 +1,7 @@
-import './Home.scss'
+import { Pagina } from '../../components/Pagina/Pagina'
 
 export const Home = () => (
-  <section className="home">
-    <h1 className="home__titulo">Home</h1>
-    <p className="home__texto">Bem-vindo à página inicial.</p>
-  </section>
+  <Pagina titulo="Home" subtitulo="Bem-vindo à página inicial.">
+    <p>Use o menu lateral para navegar entre as páginas.</p>
+  </Pagina>
 )

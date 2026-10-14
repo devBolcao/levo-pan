@@ -1,8 +1,7 @@
-import './Teste.scss'
+import { Pagina } from '../../components/Pagina/Pagina'
 
 export const Teste = () => (
-  <section className="teste">
-    <h1 className="teste__titulo">Teste</h1>
-    <p className="teste__texto">Esta é a página de teste.</p>
-  </section>
+  <Pagina titulo="Teste" subtitulo="Página de teste.">
+    <p>Conteúdo de exemplo para testar a estrutura.</p>
+  </Pagina>
 )
