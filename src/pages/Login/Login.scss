@@ -4,6 +4,14 @@
   min-height: 100vh;
   padding: 2.4rem;
   background-color: var(--cor-fundo);
+  background-image: url('../../assets/img/fundo-claro.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+[data-tema="escuro"] .login {
+  background-image: url('../../assets/img/fundo-escuro.png');
 }
 
 .login__cartao {
