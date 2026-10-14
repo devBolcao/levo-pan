@@ -1,0 +1,43 @@
+// @use "sass:color" as color;
+// @use "./variables" as v;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  // color: v.$cor-fonte;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  // background-color: v.$cor-branquinho;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 4rem 0;
+  overflow-x: hidden;
+
+    // @include v.respond(tablet) {
+    //   padding: 1rem 1rem 0;
+    // }    
+    // @include v.respond(tiny){
+    //   padding: 0;
+    // }
+}
+
+
+// input[type="number"] {
+//   -moz-appearance: textfield; // Firefox
+// }
+
+// input[type="number"]::-webkit-inner-spin-button,
+// input[type="number"]::-webkit-outer-spin-button {
+//   -webkit-appearance: none; // Chrome, Edge, Safari
+//   margin: 0;
+// }
