@@ -1,0 +1,38 @@
+@use "sass:map";
+
+$temas: (
+  "claro": (
+    "cor-fundo": #f5f7fa,
+    "cor-superficie": #ffffff,
+    "cor-texto": #1f2937,
+    "cor-texto-suave": #667085,
+    "cor-borda": #dfe3e8,
+    "cor-primaria": #2563eb,
+    "cor-primaria-hover": #1d4ed8,
+    "cor-sucesso": #15803d,
+    "cor-alerta": #b45309,
+    "cor-erro": #b91c1c,
+    "cor-sombra": rgba(15, 23, 42, 0.08)
+  ),
+  "escuro": (
+    "cor-fundo": #111827,
+    "cor-superficie": #1f2937,
+    "cor-texto": #f3f4f6,
+    "cor-texto-suave": #aab4c3,
+    "cor-borda": #374151,
+    "cor-primaria": #60a5fa,
+    "cor-primaria-hover": #93c5fd,
+    "cor-sucesso": #4ade80,
+    "cor-alerta": #fbbf24,
+    "cor-erro": #f87171,
+    "cor-sombra": rgba(0, 0, 0, 0.24)
+  )
+);
+
+@mixin aplicar($nome) {
+  $valores: map.get($temas, $nome);
+
+  @each $nome-token, $valor in $valores {
+    --#{$nome-token}: #{$valor};
+  }
+}

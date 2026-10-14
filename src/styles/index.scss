@@ -1,8 +1,8 @@
-// @use "sass:color" as color;
-// @use "./variables" as v;
+@use "./tema" as tema;
 
-
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,32 +12,36 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  // color: v.$cor-fonte;
-  font-size: 1.6rem;
-  line-height: 1.4;
-  // background-color: v.$cor-branquinho;
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 4rem 0;
-  overflow-x: hidden;
-
-    // @include v.respond(tablet) {
-    //   padding: 1rem 1rem 0;
-    // }    
-    // @include v.respond(tiny){
-    //   padding: 0;
-    // }
+:root {
+  @include tema.aplicar("claro");
+  color-scheme: light;
 }
 
+[data-tema="escuro"] {
+  @include tema.aplicar("escuro");
+  color-scheme: dark;
+}
 
-// input[type="number"] {
-//   -moz-appearance: textfield; // Firefox
-// }
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  display: flex;
+  flex-direction: column;
+  min-width: 32rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-// input[type="number"]::-webkit-inner-spin-button,
-// input[type="number"]::-webkit-outer-spin-button {
-//   -webkit-appearance: none; // Chrome, Edge, Safari
-//   margin: 0;
-// }
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
